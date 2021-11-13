@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" type="text/css" href="ext.css">
+
+	<title>Register</title>
+
+
+	<script>
+		function validate()
+		{
+			var u=document.getElementById("user");
+			var p=document.getElementById("pass");
+			if(u.value.trim()=="" || u.value.trim()=="")
+			{
+				alert("empty fields not allowed");
+				u.style.border="solid 3px red";
+				p.style.border="solid 3px red";
+				
+			}
+			else {
+				alert("Successfully Registered");
+			}
+
+			//trim removes spaces n make it blank 
+
+		}
+
+	
+	</script>
+
+
+</head>
+<body>
+	<header>
+	<div class="main">
+			<ul>
+				<li ><a href="finall.html">HOME</a></li>
+				<li  class="active"  ><a href="registerpage.html">REGISTER</a></li>
+				<li><a href="loginpage.html">LOGIN</a></li>
+				<li ><a href="whocandonatepage.html">WHO CAN DONATE BLOOD?</a></li>
+				<li ><a href="whydonateblood.html">WHY DONATE BLOOD?</a></li>
+				<li><a href="aboutuspage.html">ABOUT US</a></li>
+				
+</ul>
+</div></header>
+<div class="regbox">
+	<h2 style="color:#4caf50">REGISTER</h2>
+	<div class="textbox">
+		<input id="user" type="text" placeholder="User Name" name="name">
+</div>
+<div class="textbox">
+	
+	<input type="E-MAIL" placeholder="email" name="mail" id="email">
+</div>
+<div class="textbox">
+	
+	<input id="pass" type="PASSWORD" placeholder="Password" name="pw">
+</div>
+<form>
+<button class="btn" name="Register" onclick="validate()" >Register</button>
+<button class="btn" name="Login" formaction="loginpage.html">Login</button></form>
+</body>
+</html>

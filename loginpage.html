@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" type="text/css" href="ext.css">
+
+    <title>Login</title>
+    <script>
+         function validate()
+            {
+                var u=document.getElementById("user");
+                var p=document.getElementById("pass");
+                if(u.value.trim()=="")
+                {
+                    alert("empty fields not allowed");
+                    u.style.border="solid 3px red";
+                    p.style.border="solid 3px red";
+                    return false;
+                }
+                else if(p.value.trim()=="")
+                {
+                    alert("empty fields not allowed");
+                    //p.style.border="solid 3px red";
+                    return false;
+                }
+               
+                else 
+                alert("sucessfully logged in");
+                return true;
+
+                //trim removes spaces n make it blank 
+
+            }
+
+    
+    
+
+
+</script>
+
+	
+</head>
+<body><header>
+    <div class="main">
+            <ul>
+                <li ><a href="finall.html">HOME</a></li>
+                <li><a href="registerpage.html">REGISTER</a></li>
+                <li class="active"><a href="loginpage.html">LOGIN</a></li>
+                <li ><a href="whocandonatepage.html">WHO CAN DONATE BLOOD?</a></li>
+                <li ><a href="whydonateblood.html">WHY DONATE BLOOD?</a></li>
+                <li><a href="aboutuspage.html">ABOUT US</a></li>
+             
+</ul>
+</div></header>
+<div class="regbox">
+	<h2 style="color:#4caf50">LOGIN</h2>
+	<div class="textbox">
+		<input id="user" type="text" placeholder="User Name" name="name"><br>
+</div>
+<div class="textbox">
+	<input id="pass" type="PASSWORD" placeholder="Password" name="pw">
+</div><br><br>
+<form onsubmit="return validate()" action="postlogin.html">
+<button class="btn" name="Login" >Login</button>
+<button class="btn" name="Home" formaction="finall.html">Home</button></form>
+</body>
+</html>
